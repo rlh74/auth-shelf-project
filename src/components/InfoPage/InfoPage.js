@@ -8,6 +8,12 @@ class InfoPage extends Component {
     this.props.dispatch({type: 'FETCH_SHELF'});
   }
 
+  removeItem = (event, id) => {
+    event.preventDefault();
+    console.log('in remove item:', id);
+    this.props.dispatch({type: 'REMOVE_ITEM', payload: id})
+  }
+
   render() {
     return (
       <div>
@@ -19,6 +25,7 @@ class InfoPage extends Component {
             <li key = {item.id}>
               {item.description}
               <img src = {item.img_url} alt = {item.description}/>
+              <button onClick={ (event) => this.removeItem(event, item.id) }>Remove</button>
             </li>
           ))}
         </ul>

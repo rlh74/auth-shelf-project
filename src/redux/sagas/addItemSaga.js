@@ -5,6 +5,7 @@ import axios from 'axios';
 function* addItem(action) {
   try {
     yield axios.post('/api/shelf', action.payload);
+    yield put({type: 'FETCH_SHELF'})
   } catch (error) {
     console.log('error with adding item:', error);
   }
