@@ -18,13 +18,12 @@ class InfoPage extends Component {
     return (
       <div>
         <AddItemForm />
-        {/* {JSON.stringify(this.props.shelf)} */}
         <h2>Your Shelf:</h2>
         <ul>
           {this.props.shelf.map(item => (
             <li key = {item.id}>
               {item.description}
-              <img src = {item.img_url} alt = {item.description}/>
+              <img src={item.image_url} alt ={item.description}/>
               <button onClick={ (event) => this.removeItem(event, item.id) }>Remove</button>
             </li>
           ))}
