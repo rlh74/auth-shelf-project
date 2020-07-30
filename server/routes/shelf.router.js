@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
     VALUES ($1, $2, $3);`;
     pool.query(queryText, [req.body.description, req.body.image_url, req.body.user_id])
     .then(response => {
-        res.sendStatue(200);
+        res.sendStatus(200);
     }).catch(error => {
         console.log('error adding item', error);
         res.sendStatus(500);

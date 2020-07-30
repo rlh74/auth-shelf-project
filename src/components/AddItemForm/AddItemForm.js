@@ -36,7 +36,7 @@ handleImage = (event) => {
     <label>Description: </label>
     <input type="text" placeholder="Description" onChange={this.handleDescription}></input>
     <br />
-    <label>Image: </label>
+    <label>Image URL: </label>
     <input type="text" placeholder="image URL" onChange={this.handleImage}></input>
     <br />
     <button>Add</button>
