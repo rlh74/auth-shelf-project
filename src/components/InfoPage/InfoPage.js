@@ -1,5 +1,7 @@
+
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import AddItemForm from '../AddItemForm/AddItemForm';
 
 class InfoPage extends Component {
   componentDidMount() {
@@ -9,6 +11,7 @@ class InfoPage extends Component {
   render() {
     return (
       <div>
+        <AddItemForm />
         {/* {JSON.stringify(this.props.shelf)} */}
         <h2>Your Shelf:</h2>
         <ul>
@@ -23,6 +26,7 @@ class InfoPage extends Component {
     );
   }
 }
+
 
 const mapStateToProps = state => ({
   shelf: state.shelf,
