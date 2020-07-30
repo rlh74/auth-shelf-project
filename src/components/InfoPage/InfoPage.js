@@ -1,4 +1,5 @@
 import React from 'react';
+import AddItemForm from '../AddItemForm/AddItemForm';
 
 // This is one of our simplest components
 // It doesn't have local state, so it can be a function component.
@@ -6,10 +7,15 @@ import React from 'react';
 // or even care what the redux state is, so it doesn't need 'connect()'
 
 const InfoPage = () => (
+
+  
+
   <div>
+    <AddItemForm />
     <p>
       Shelf Page
     </p>
+    
   </div>
 );
 
